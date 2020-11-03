@@ -1,0 +1,89 @@
+.x-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box; 
+  .handler {  
+    i {
+      font-size: 24px;
+      color: #666;
+    }
+    span {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      
+      &.prev {
+        left: 0;
+      }
+      &.next {
+        right: 0;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .carousel-list {
+    width: 100%;
+    font-size: 0;
+    white-space: nowrap;
+    transition: all .2s linear;
+  }
+
+  .pagination {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    text-align: center;
+    font-size: 0;
+    z-index: 10;
+    transition: all .3s linear; 
+    .item {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background-color: #ccc;
+      margin-right: 10px;
+      cursor: pointer;
+      &:last-child {
+        margin-right: 0;
+      }
+      &.active {
+        background-color: #007fff
+      }
+    }
+  }
+}
+
+.x-carousel.x-carousel_vertical .x-carousel-item {
+  display: block;
+}
+.x-carousel-item { 
+  width: 100%; 
+  display: inline-block;
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+
+.x-carousel.x-carousel_vertical{
+  .pagination {
+    width: auto;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    .item {
+      display: block;
+      margin-right: 0;
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

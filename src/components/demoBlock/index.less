@@ -1,0 +1,17 @@
+.demo-block{   
+    position: relative; 
+    .code-wrap{   
+        transform: translateY(0);
+        max-height: 400px;
+        overflow: hidden;
+        overflow: auto;
+    } 
+} 
+
+.fade-enter-active, .fade-leave-active {
+    transition: all .5s;
+}
+.fade-enter, .fade-leave-to {
+    // opacity: 0; 
+    transform: translateY(100%)
+}

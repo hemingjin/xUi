@@ -1,0 +1,45 @@
+@color-primary: #007fff;
+@color-danger: #e74c3c;
+
+@color-error: #e74c3c;
+@color-success: #00bd56;
+@color-warning: #f8b739;
+@color-info: #909399;
+@color-default: #606266;
+@border-rdaius-base: 4px;
+@border-color: #eee;
+
+@color-primary-border: #97c7f7;
+@color-primary-bg: #e5f0fb;
+
+// 封装变形transform
+.transform(@string){
+	-webkit-transform:   @string;
+	-moz-transform: 	 @string;
+	-ms-transform: 		 @string;
+	-o-transform: 		 @string;
+	transform: 		 	 @string;
+}
+
+// 三角形, 方向、大小、颜色
+.triangle_style(top, @size, @color) { 
+      border-left: @size solid transparent;
+     border-right: @size solid transparent;
+    border-bottom: @size solid @color; 
+}
+.triangle_style(bottom, @size, @color) { 
+     border-left: @size solid transparent;
+    border-right: @size solid transparent;
+      border-top: @size solid @color; 
+}
+.triangle_style(left, @size, @color) {  
+    border-right: @size solid @color;
+    border-bottom: @size solid transparent;
+    border-top: @size solid transparent; 
+}
+.triangle_style(right, @size, @color) { 
+    border-left: @size solid @color;
+    border-bottom: @size solid transparent;
+    border-top: @size solid transparent; 
+}
+

@@ -1,0 +1,57 @@
+@import './common/variable.less';
+
+
+.x-select {
+    position: relative;
+    display: inline-block;
+    .is-expend {
+        display: block;
+        transition: all .2s linear;
+        .transform(rotate(180deg));
+    }
+
+    .x-option-group { 
+        position: absolute;
+        width: 100%;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+        padding: 10px 15px;
+        top: 50px;
+        z-index: 100;
+        box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
+        &:after, &:before{
+            position: absolute;
+            display: block;
+            content: '';
+            left: 50%;
+            .transform(transalteX(-50%));
+        }
+        &:after{ 
+            top: -8px;
+            .triangle_style(top, 8px, #ddd);
+            z-index: 100;
+        }
+        &:before {
+            top: -7px;
+            .triangle_style(top, 8px, #fff);
+            z-index: 101;
+        }
+        .x-option {
+            line-height: 28px;
+            font-size: 14px;
+            white-space: nowrap;
+            color: @color-default;
+            display: block;
+            cursor: pointer;
+        }
+    }
+} 
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+}

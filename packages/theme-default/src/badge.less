@@ -1,0 +1,40 @@
+@import './common/variable.less';
+
+@badge-size: 10px;
+
+.x-badge {
+    position: relative;
+    display: inline-block;
+    &-item {
+        position: absolute;
+        width: @badge-size;
+        height: @badge-size;
+        border-radius: @badge-size / 2;
+        top: -(@badge-size / 2);
+        right: -(@badge-size / 2);
+        z-index: 1000;
+        &_danger {
+            background-color: @color-danger;
+        }
+        &_success {
+            background-color: @color-success;
+        }
+        &_primary {
+            background-color: @color-primary;
+        }
+        &_warning {
+            background-color: @color-warning;
+        }
+        &_count, &_custom {
+            color: #fff;
+            font-size: 12px;
+            height: 16px;
+            width: auto;
+            border-radius: 8px;
+            line-height: 16px;
+            padding: 0 5px;
+            font-style: normal;
+            text-align: center;
+        }
+    }
+}

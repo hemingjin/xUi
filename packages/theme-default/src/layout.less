@@ -1,0 +1,51 @@
+@iterations: 24;
+
+.x-row {
+    position: relative;
+    overflow: hidden;
+}
+
+.x-col{
+    position: relative;
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box; 
+} 
+
+.col-width(@i) when (@i > 0) {
+    .x-col-@{i} {
+        width: 100% / (24 / @i) 
+    }
+    .col-width(@i - 1);
+} 
+
+.col-width(@iterations);
+
+.col-width-responsive(@i, @type) when (@i > 0) {
+    .x-col-@{type}-@{i} {
+        width: 100% / (24 / @i) 
+    }
+    .col-width-responsive(@i - 1,@type);
+}
+
+@media (max-width: 768px) { 
+    .col-width-responsive(@iterations, xs)
+}
+
+@media (min-width: 769px) and (max-width: 991px) { 
+    .col-width-responsive(@iterations, sm)
+}
+
+@media (min-width: 992px) and (max-width: 1199px) { 
+    .col-width-responsive(@iterations, md)
+}
+
+@media (min-width: 1200px) and (max-width: 1919px) { 
+    .col-width-responsive(@iterations, lg)
+}
+
+@media (min-width: 1920px) { 
+    .col-width-responsive(@iterations, xl)
+}

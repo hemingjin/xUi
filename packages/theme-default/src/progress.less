@@ -1,0 +1,102 @@
+@import './common/variable.less';
+@import './common/animate.less';
+
+.x-progress{
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    
+    .x-progress-inner{
+        position: relative;
+        width: 100%;
+        height: 8px;
+        border-radius: 4px;
+        background-color: #dadada; 
+        &.x-progress-large{
+            height: 10px;
+            border-radius: 5px;
+        }
+        &.x-progress-thin{
+            height: 4px;
+            border-radius: 2px;
+        }
+        .x-progress-bar{
+            position: absolute;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 4px;
+            background-color: @color-primary;
+            z-index: 1000;
+            overflow: hidden; 
+            &.x-progress-bar-success{
+                background-color: @color-success;
+            }
+            &.x-progress-bar-warning{
+                background-color: @color-warning;
+            }
+            &.x-progress-bar-danger,
+            &.x-progress-bar-error{
+                background-color: @color-danger;
+            }
+            &.x-progress-bar-animate:after {
+                position: absolute;
+                display: block;
+                content: '';
+                width: 100%;
+                height: 100%;
+                top:0;
+                left: 0;
+                border-radius: 5px;
+                background-color: #fff;
+                z-index: 1001;
+                animation: leftToRight 2s ease-in-out infinite; 
+                -webkit-animation: leftToRight 2s ease-in-out infinite; 
+                -moz-animation: leftToRight 2s ease-in-out infinite; 
+            }
+        } 
+    }
+    .percent-text{
+        width: 50px;
+        text-align: center;
+        position: absolute;
+        font-size: 12px;
+        color: #666;  
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        i {
+            font-size: 12px;
+            background-color: #333;
+            color: #fff;
+            padding: 2px;
+            border-radius: 50%;
+            &.progress-complete{
+                background-color: @color-success;
+            }
+            &.progress-error{
+                background-color:@color-danger;
+            }
+        }
+    }
+    &.text-padding {
+        padding-right: 50px;
+    }
+}
+
+.x-progress + .x-progress{
+    margin-top: 10px;
+} 
+
+.keyframes(all,leftToRight,{
+    from {
+        transform: translateX(-100%);
+        opacity: 0.6;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 0;
+    }
+});

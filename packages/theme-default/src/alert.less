@@ -1,0 +1,89 @@
+@import './common/variable.less';
+
+.x-alert {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    padding: 8px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    transition: all .3s linear;
+    &.x-alert-warning {
+        background-color: lighten(@color-warning, 35%);
+        &:hover {
+            background-color: lighten(@color-warning, 33%);
+        }
+        .x-alert-type i {
+            color: @color-warning; 
+        }
+        &.x-alert-border {
+            border: 1px solid lighten(@color-warning, 25%)
+        }
+    }
+    &.x-alert-success {
+        background-color: lighten(@color-success, 55%);
+        &:hover {
+            background-color: lighten(@color-success, 53%);
+        }
+        .x-alert-type i {
+            color: @color-success; 
+        }
+        &.x-alert-border {
+            border: 1px solid lighten(@color-success, 25%)
+        }
+    }
+    &.x-alert-error {
+        background-color: lighten(@color-error, 39%);
+        &:hover {
+            background-color: lighten(@color-error, 37%);
+        }
+        .x-alert-type i {
+            color: @color-error; 
+        }
+        &.x-alert-border {
+            border: 1px solid lighten(@color-error, 25%)
+        }
+    }
+    .x-alert-type {
+        width: 20px; 
+        i {
+            font-size: 18px;
+        }
+    }
+    .x-alert-wrap { 
+        flex:1;
+        padding: 0 10px;
+        line-height: 1.6;
+        .x-alert-title {
+            font-size: 16px;
+            color: @color-default;
+        }
+        .x-alert-content {
+            font-size: 14px;
+            color: @color-info;
+        }
+    }
+    .x-alert-event { 
+        color:  @color-info; 
+        cursor: pointer;
+        span {
+            font-size: 12px;
+        }
+        i, span {
+            color: @color-info;
+            &:hover {
+                color: @color-default
+            }
+        }
+    }
+}
+
+
+.fade-enter-active, .fade-leave-active {
+    transition: all .2s;
+}
+.fade-enter, .fade-leave-to {
+    opacity: 0;  
+}

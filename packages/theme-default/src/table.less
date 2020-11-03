@@ -1,0 +1,46 @@
+@import './common/variable.less';
+
+table{
+    width: 100%;
+    font-size: 14px;
+    color: @color-default;
+}
+
+.x-table {
+    width: 100%;
+    margin: 20px auto;
+    
+    &.x-table-border{
+        border-left: 1px solid @border-color;
+        border-right: 1px solid @border-color;
+        .x-table-header th + th ,
+        .x-table-body td + td {
+            border-left: 1px solid @border-color;
+        }
+    }
+    .cell {
+        padding: 0 10px;
+        line-height: 24px;  
+    }
+    .x-table-header-wrapper {
+        .x-table-header th {
+            padding: 10px 0;
+            text-align: left;
+            border-top: 1px solid @border-color;
+            border-bottom: 1px solid @border-color; 
+            .cell {
+                font-weight: bold;
+                color: #333;
+            }
+        }
+    }
+    .x-table-body-wrapper { 
+        .x-table-body tr:hover {
+            background-color: lighten(@color-primary, 47%);; 
+        }
+        .x-table-body td {
+            padding: 10px 0; 
+            border-bottom: 1px solid @border-color; 
+        }
+    }
+}

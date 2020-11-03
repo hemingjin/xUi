@@ -1,0 +1,38 @@
+@import './common/variable.less';
+
+.x-card {
+    position: relative;  
+    margin-bottom: 10px;
+    border-radius: 4px;
+    // box-shadow: 0px 0px 13px 0px rgba(82, 63, 105, 0.16);
+    // -moz-box-shadow: 0px 0px 13px 0px rgba(82, 63, 105, 0.16);
+    // -webkit-box-shadow: 0px 0px 13px 0px rgba(82, 63, 105, 0.16);
+    background-color: #fff;
+    border: 1px solid #eee;
+    transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    &:hover {
+        box-shadow: 0px 0px 13px 0px rgba(82, 63, 105, 0.15);
+        -moz-box-shadow: 0px 0px 13px 0px rgba(82, 63, 105, 0.15);
+        -webkit-box-shadow: 0px 0px 13px 0px rgba(82, 63, 105, 0.15);
+    }
+    .x-card-header {
+        display: flex;
+        -moz-display: flex;
+        -webkit-display: flex;
+        height: 40px;
+        padding: 0 10px; 
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #eee;
+        color: @color-default;
+        font-size: 14px;
+    }
+    .x-card-content {
+        padding: 10px;
+        font-size: 14px; 
+        min-height: 160px;
+    }
+
+}

@@ -1,0 +1,12 @@
+                &lt;x-table :data-source="tableData" :columns="columns2"  is-border&gt; 
+                    &lt;template slot-scope="{row}" slot="name"&gt;
+                        &lt;x-tag size="mini"&gt;{{row.data.name}}&lt;/x-tag&gt; 
+                    &lt;/template&gt; 
+                    &lt;template slot-scope="{row}" slot="date"&gt;
+                        &lt;span&gt;{{$utils.formatDate(row.data.date)}}&lt;/span&gt;
+                    &lt;/template&gt; 
+                    &lt;template slot-scope="{row}" slot="action"&gt; 
+                        &lt;x-button @click="getUserInfo(row.data)" size="mini" type="primary"&gt;查看用户&lt;/x-button&gt;
+                        &lt;x-button @click="delUser(row.index)" size="mini" type="primary" &gt;删除用户&lt;/x-button&gt;
+                    &lt;/template&gt;
+                &lt;/x-table&gt;
