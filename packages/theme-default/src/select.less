@@ -17,7 +17,7 @@
         border: 1px solid #ddd;
         border-radius: 4px;
         box-sizing: border-box;
-        padding: 10px 15px;
+        padding: 5px 0 ;
         top: 50px;
         z-index: 100;
         box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
@@ -39,12 +39,17 @@
             z-index: 101;
         }
         .x-option {
-            line-height: 28px;
+            padding: 0 15px;
+            line-height: 36px;
             font-size: 14px;
             white-space: nowrap;
             color: @color-default;
             display: block;
             cursor: pointer;
+            &.selected {
+                background: rgb(213 229 243);
+                color: rgb(26 140 255);
+            }
         }
     }
 } 

@@ -27,7 +27,7 @@ export default {
             // if (parent) {
                 
             // }
-            this.select.currentValue = this.value
+            this.select.currentValue = this.label
         }
     }
 }
