@@ -5,6 +5,7 @@
         class="x-input-inner"
         readonly="readonly"
         :value="currentValue"
+        :placeholder="placeholder"
         @focus="isExpend = true"
         @blur="isExpend = false"
       />
@@ -29,7 +30,8 @@ export default {
   name: "xSelect",
   props: {
     value: [String, Number],
-    data: Array
+    data: Array,
+    placeholder: String
   },
   data() {
     return {
@@ -37,7 +39,7 @@ export default {
       // 是否展开选择列表
       isExpend: false
     };
-  },
+  }, 
   methods: {
     // 选中
     selectHandle(data) {
