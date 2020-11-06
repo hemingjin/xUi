@@ -47,7 +47,10 @@ const routes = [
     }, {
         path: 'carousel',
         name: 'Carousel轮播图'
-    },
+    }, {
+        path: 'quickInput',
+        name: 'QuickInput快捷输入框'
+    }
     // {
     //     path: 'poptip',
     //     name: 'Poptip气泡提示'

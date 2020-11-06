@@ -23,6 +23,7 @@ import XTimeline from './timeline/index'
 import XTimelineItem from './timeline/timelineItem'
 import XCarousel from './carousel/index'
 import XCarouselItem from './carousel/carouselItem'
+import XQuickInput from './quickInput/index'
 
 const components = [
     XButton,
@@ -47,7 +48,8 @@ const components = [
     XTimeline,
     XTimelineItem,
     XCarousel,
-    XCarouselItem
+    XCarouselItem,
+    XQuickInput
 ]
 
 const install = function(Vue) {
@@ -84,5 +86,6 @@ export default {
     XTimeline,
     XTimelineItem,
     XCarousel,
-    XCarouselItem
+    XCarouselItem,
+    XQuickInput
 }

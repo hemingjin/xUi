@@ -1,0 +1,33 @@
+.quick-input-wrap {
+  position: relative;
+}
+
+.quick-view {
+  position: absolute;
+  width: 100%; 
+  box-sizing: border-box;
+  left: 0;
+  z-index: 1000; 
+  box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
+  background: #fff;
+  .quick-item {
+    padding: 0 10px;
+    font-size: 14px;
+    line-height: 38px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &.selected,
+    &:hover{
+      background: rgb(11 107 204);
+      color: rgb(255 255 255);
+    }
+  }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .1s linear;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}

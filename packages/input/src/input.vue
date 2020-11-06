@@ -136,7 +136,7 @@ export default {
         },
         // 监听输入框内容变化事件
         handleChange(event) {
-            this.$emit('change', event.target.value)
+            this.$emit('change', this.currentValue)
         },
         // 监听输入框清空事件
         handleClear() {
