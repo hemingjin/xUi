@@ -1,0 +1,76 @@
+@import './common/variable.less';
+.x-messagebox-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.5);
+}
+.x-messagebox {
+  position: absolute;
+  padding: 10px 15px;
+  width: 400px;
+  line-height: 36px;
+  color: @color-default; 
+  border-radius: @border-rdaius-base;
+  left: 50%;
+  top: 160px;
+  transform: translateX(-50%);
+  transition: all .2s; 
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.4);
+  background-color: #fff;
+  .icon-info {
+    color: @color-info;
+  }
+
+  .icon-success {
+    color: @color-success; 
+  }
+
+  .icon-warning {
+    color: @color-warning; 
+  }
+
+  .icon-error {
+    color: @color-error; 
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span {
+      width: 100%;
+      margin-right: 10px;
+      font-size: 18px;
+    }
+    i {
+      cursor: pointer;
+    }
+  }
+
+  .content {
+    position: relative; 
+    padding: 0 10px;
+    .x-icon {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      font-size: 22px;
+    }
+    .message_content {
+      padding-left: 30px;
+      font-size: 14px;
+    }
+  }
+  .footer {
+    text-align: right;
+  }
+}
+
+.x-messagebox-fade-enter,
+.x-messagebox-fade-leave-active {
+  opacity: 0;
+  transform: translate(-50%, -100%);
+}

@@ -25,6 +25,7 @@ import XCarousel from './carousel/index'
 import XCarouselItem from './carousel/carouselItem'
 import XQuickInput from './quickInput/index'
 import XMessage from './message/index'
+import XMessageBox from './messageBox/index'
 
 const components = [
     XButton,
@@ -56,10 +57,10 @@ const components = [
 const install = function(Vue) {
     if (install.installed) return;
     Vue.prototype.$utils = utils
-    components.map( component => Vue.component(component.name, component))
-
+    components.map( component => Vue.component(component.name, component)) 
     
     Vue.prototype.$message = XMessage;
+    Vue.prototype.$messageBox = XMessageBox;
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
@@ -92,5 +93,6 @@ export default {
     XCarousel,
     XCarouselItem,
     XQuickInput,
-    XMessage
+    XMessage,
+    XMessageBox
 }

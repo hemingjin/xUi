@@ -1,16 +1,13 @@
 import Message from './message.vue'
 import Vue from 'vue'
 
-let messageInstance = Vue.extend(Message)
-
-console.log(messageInstance)
+let messageInstance = Vue.extend(Message) 
 
 let instance;
 let instances = [];
 let seed = 1;
 
-const message = function(options) { 
-  console.log(options)
+const message = function(options) {  
   options = options || {};
   if(typeof options === 'string') {
     options = {

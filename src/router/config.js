@@ -52,7 +52,10 @@ const routes = [
         name: 'QuickInput快捷输入框'
     }, {
         path: 'message',
-        name: 'message消息框'
+        name: 'Message消息框'
+    }, {
+        path: 'messageBox',
+        name: 'MessageBox弹框'
     }
     // {
     //     path: 'poptip',
