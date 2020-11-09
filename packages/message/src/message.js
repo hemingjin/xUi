@@ -10,6 +10,7 @@ let instances = [];
 let seed = 1;
 
 const message = function(options) { 
+  console.log(options)
   options = options || {};
   if(typeof options === 'string') {
     options = {
@@ -30,8 +31,7 @@ const message = function(options) {
   instance.vm.visible = true;
   instance.dom = instance.vm.$el;
   instance.dom.style.zIndex = 9999;
-  instances.push(instance);
-  console.log(instances)
+  instances.push(instance); 
 
   return instance.vm;
 };

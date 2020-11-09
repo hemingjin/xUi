@@ -19,6 +19,12 @@
       </div>
       <demo-block slot="code"></demo-block>
     </demo-show>
+    <demo-show label="可关闭">
+      <div class="demo">
+        <x-button @click="showMessageClose">默认</x-button> 
+      </div>
+      <demo-block slot="code"></demo-block>
+    </demo-show>
   </div>
 </template>
 <script>
@@ -32,6 +38,12 @@ export default {
     },
     showMessage2(type) {
       this.$message[type]('这是一条消息提示！')
+    },
+    showMessageClose() {
+      this.$message({
+        showClose: true,
+        message: '一条可关闭的消息'
+      })
     }
   }
 };
