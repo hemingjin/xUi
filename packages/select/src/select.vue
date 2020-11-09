@@ -6,14 +6,12 @@
         readonly="readonly"
         :value="currentValue"
         :placeholder="placeholder"
-        @focus="isExpend = true"
-        @blur="isExpend = false"
+        @focus="isExpend = true" 
       />
       <i class="x-input-fix x-input-suffix x-icon icon-unfold" :class="{'is-expend': isExpend}"></i>
     </div>
     <transition name="fade">
-      <div class="x-option-group" v-show="isExpend">
-        <!-- <slot></slot> -->
+      <div class="x-option-group" v-show="isExpend"> 
         <div
           class="x-option"
           :class="[{'selected': currentValue == item}]"
@@ -42,9 +40,10 @@ export default {
   }, 
   methods: {
     // 选中
-    selectHandle(data) {
+    selectHandle(data) { 
       this.currentValue = data;
-      this.$emit("input", data);
+      this.isExpend = false;
+      this.$emit("input", this.currentValue);
     }
   }
 };
