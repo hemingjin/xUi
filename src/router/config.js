@@ -50,6 +50,9 @@ const routes = [
     }, {
         path: 'quickInput',
         name: 'QuickInput快捷输入框'
+    }, {
+        path: 'message',
+        name: 'message消息框'
     }
     // {
     //     path: 'poptip',

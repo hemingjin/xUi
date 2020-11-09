@@ -24,6 +24,7 @@ import XTimelineItem from './timeline/timelineItem'
 import XCarousel from './carousel/index'
 import XCarouselItem from './carousel/carouselItem'
 import XQuickInput from './quickInput/index'
+import XMessage from './message/index'
 
 const components = [
     XButton,
@@ -56,6 +57,9 @@ const install = function(Vue) {
     if (install.installed) return;
     Vue.prototype.$utils = utils
     components.map( component => Vue.component(component.name, component))
+
+    
+    Vue.prototype.$message = XMessage;
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
@@ -87,5 +91,6 @@ export default {
     XTimelineItem,
     XCarousel,
     XCarouselItem,
-    XQuickInput
+    XQuickInput,
+    XMessage
 }

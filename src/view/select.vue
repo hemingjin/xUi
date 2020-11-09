@@ -1,6 +1,6 @@
 <template>
     <div class="page">
-        <div class="page-title">{{pageTitle}} <i class="tip-fixed">to FIXED (2019/5/22 17:00)</i></div>
+        <div class="page-title">{{pageTitle}} <i class="tip-completed">completed (2020/11/9 17:00)</i></div>
         <demo-show label="基本用法"> 
             <div class="demo">
                 <x-select placeholder="请选择" v-model="currentValue" :data="optionList"> 

@@ -1,0 +1,40 @@
+@import './common/variable.less';
+
+.x-message {
+  position: absolute;
+  padding: 0 15px;
+  line-height: 36px;
+  color: #fff;
+  border-radius: @border-rdaius-base;
+  left: 50%;
+  top: 60px;
+  transform: translateX(-50%);
+  transition: all .4s;
+  i {
+    font-size: 14px;
+  }
+  span {
+    font-size: 14px;
+  }
+  &-info {
+    background-color: @color-info;
+  }
+
+  &-success {
+    background-color: @color-success; 
+  }
+
+  &-warning {
+    background-color: @color-warning; 
+  }
+
+  &-error {
+    background-color: @color-error; 
+  }
+}
+
+.x-message-fade-enter,
+.x-message-fade-leave-active {
+  opacity: 0;
+  transform: translate(-50%, -100%);
+}
