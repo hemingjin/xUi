@@ -5,8 +5,8 @@ let messageBoxConstrucor = Vue.extend(MessageBox);
 let messageBoxInstance;
 let currentMsgBox;
 
-window.addEventListener('popstate', () => {
-  console.log(2222)
+// FIXED
+window.addEventListener('popstate', () => { 
   if (messageBoxInstance) {
     document.body.removeChild(messageBoxInstance.vm.$el);
     currentMsgBox = null;

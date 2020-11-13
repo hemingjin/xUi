@@ -1,0 +1,104 @@
+@text-base-color: #333;
+@base-bg-color  : #6871eb;
+@hover-bg-color : #91a8f5;
+@error-color: #e74c3c;
+@highlight-color: #FFEB3B;
+
+.x_tag_input_wrap {
+  position     : relative;
+  min-height   : 32px;
+  padding      : 0 10px;
+  display      : flex;
+  align-items  : center;
+  font-size    : 12px;
+  color        : #606266;
+  background   : #1b2a5f;
+  border-radius: 5px;
+
+  
+  .tags {
+ 
+    .tag-item {
+      position        : relative;
+      height          : 24px;
+      line-height     : 24px;
+      padding         : 0 5px;
+      display         : flex;
+      float           : left;
+      margin-right    : 5px;
+      margin-top      : 4px;
+      margin-bottom   : 1px;
+      align-items     : center;
+      background-color: #455a93;
+      cursor          : pointer;
+      border-radius   : 3px;
+      overflow: hidden;
+
+      &:hover {
+        background-color: @hover-bg-color;
+      }
+
+      &.is-error {
+        background-color: @error-color;
+        color           : @error-color;
+
+        i.remove-tag-icon {
+          color: @error-color;
+        }
+      }
+
+      &.selected:after { 
+        position: absolute;
+        content: '';
+        display: block;
+        border-top: 12px solid @highlight-color;
+        border-left: 0px solid transparent;
+        border-right: 12px solid transparent;
+        top: 0;
+        left: 0;
+      }
+
+      span {
+        margin-right: 5px;
+        color       : #fff;
+      }
+
+      i {
+        color    : #1b2a5f;
+        font-size: 14px;
+
+        &:hover {
+          color: #ddd;
+          // background-color: #909399;
+        }
+      }
+
+      .tag-item-input {
+        position        : absolute;
+        width           : 100%;
+        padding         : 0 5px;
+        box-sizing      : border-box;
+        height          : 20px;
+        line-height     : 20px;
+        background-color: rgb(245, 233, 112);
+        top             : 0;
+        left            : 0;
+        right           : 0;
+        bottom          : 0;
+        color           : #606266;
+      }
+    }
+
+    .tag-item+.tag-item {
+      // margin-left: 5px;
+    }
+  }
+
+  .tag-input {
+    width      : 240px;
+    flex       : 1;
+    line-height: 32px;
+    color      : #fff;
+    background : transparent;
+  } 
+}

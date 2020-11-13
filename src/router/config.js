@@ -51,6 +51,9 @@ const routes = [
         path: 'quickInput',
         name: 'QuickInput快捷输入框'
     }, {
+        path: 'tagInput',
+        name: 'TagInput多标签输入框'
+    }, {
         path: 'message',
         name: 'Message消息框'
     }, {

@@ -26,6 +26,7 @@ import XCarouselItem from './carousel/carouselItem'
 import XQuickInput from './quickInput/index'
 import XMessage from './message/index'
 import XMessageBox from './messageBox/index'
+import XTagInput from './tagInput/index'
 
 const components = [
     XButton,
@@ -51,7 +52,8 @@ const components = [
     XTimelineItem,
     XCarousel,
     XCarouselItem,
-    XQuickInput
+    XQuickInput,
+    XTagInput
 ]
 
 const install = function(Vue) {
@@ -94,5 +96,6 @@ export default {
     XCarouselItem,
     XQuickInput,
     XMessage,
-    XMessageBox
+    XMessageBox,
+    XTagInput
 }
