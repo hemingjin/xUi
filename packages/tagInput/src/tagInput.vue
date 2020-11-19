@@ -78,7 +78,12 @@ export default {
   },
   mounted() {
     this.currentTags = this.value;
-    window.addEventListener("keyup", this.keyUpAddTag, false); 
+    window.addEventListener("keyup", this.keyUpAddTag, false);  
+    this.$nextTick(() => { 
+      if(this.$refs.tagSpan.length > 0) {
+        this.setEditInputInnerWidth();
+      }
+    })
   },
   methods: {
     // 添加
