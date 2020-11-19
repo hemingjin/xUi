@@ -12,7 +12,7 @@
     </demo-show>
     <demo-show label="带规则验证用法">
       <div class="demo">
-        <x-tag-input v-model="ruleTags" :rule.sync="isUrl" placeholder-text="请输入网址"></x-tag-input>
+        <x-tag-input v-model="ruleTags" :rule.sync="isUrl" placeholder-text="请输入格式有效的网址"></x-tag-input>
  
       </div>
       <demo-block slot="code">
